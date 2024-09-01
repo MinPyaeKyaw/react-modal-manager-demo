@@ -2,6 +2,7 @@ import { useModal } from "@saimin/react-modal-manager";
 import "./style.css";
 import SmileModal from "../modals/SmileModal";
 import FullScreenModal from "../modals/FullScreenModal";
+import ParentModal from "../modals/ParentModal";
 
 function Home() {
   const { open } = useModal();
@@ -132,6 +133,12 @@ function Home() {
     });
   };
 
+  const handleOpenParentModal = () => {
+    open("parent", {
+      content: <ParentModal id="parent" />,
+    });
+  };
+
   return (
     <div className="home">
       <div className="links">
@@ -191,6 +198,11 @@ function Home() {
       <h1>Fullscreen</h1>
       <div className="buttons">
         <button onClick={handleFullscreenOpen}>Fullscreen</button>
+      </div>
+
+      <h1>Nested Modals</h1>
+      <div className="buttons">
+        <button onClick={handleOpenParentModal}>Parent</button>
       </div>
 
       <h1>Customize Backdrop</h1>
