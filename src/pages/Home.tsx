@@ -150,7 +150,7 @@ function Home() {
         </a>
 
         <a
-          href="https://github.com/MinPyaeKyaw/react-modal-manager"
+          href="https://github.com/MinPyaeKyaw/react-modal-manager-demo"
           target="_blank"
         >
           Source Code
